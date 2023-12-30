@@ -13,3 +13,44 @@
  *= require_tree .
  *= require_self
  */
+ 
+ @font-face {
+  font-family: 'Proxima Nova Bold';
+  src: url('../fonts/Proxima-Nova-Extra-Condensed/Demo_Fonts/Fontspring-DEMO-proximanova-bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Light';
+  src: url('../fonts/Proxima-Nova-Extra-Condensed/Demo_Fonts/Fontspring-DEMO-proximanova-light.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+ :root {
+    --primary-color: #3778c2;
+    --secondary-color: #5fb523;
+    --secondary-color-light: #d3f5b8;
+    --danger-color: #8b0000;
+    --danger-color-light: #ffcccb;
+    --text-color: #434b54;
+    --bold-font: 'Proxima Nova Bold', sans-serif;
+    --light-font: 'Proxima Nova Light', sans-serif;
+  }
+
+.flash {
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .notice {
+    background-color: var(--secondary-color-light);
+    color: var(--secondary-color);
+  }
+  
+  .alert {
+    background-color: var(--secondary-color-light);
+    color: var(--danger-color);
+  }
