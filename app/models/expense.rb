@@ -9,11 +9,12 @@ class Expense < ApplicationRecord
 
     def self.last_five_expenses_grouped_by_category
         Expense.joins(:categories)
-               .order(created_at: :desc)
+               .order('expenses.created_at DESC') # Order by expenses.created_at
                .limit(5)
-               .group('categories.id')
+               .group('categories.id, expenses.created_at') # Include expenses.created_at in group by
                .select('categories.name as category_name, SUM(expenses.amount) as total_amount, expenses.*')
-    end
+      end
+      
 
     def self.expenses_by_category(category_id)
         Expense.joins(:categories)

@@ -34,6 +34,7 @@ end
 
 group :test do
   gem "selenium-webdriver"
+  gem 'database_cleaner'
 end
 
 gem 'rubocop', '>= 1.0', '< 2.0'
