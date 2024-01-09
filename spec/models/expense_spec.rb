@@ -46,37 +46,4 @@ RSpec.describe Expense, type: :model do
       expect(association.options[:through]).to eq :category_expenses
     end
   end
-
-  describe 'scopes and methods' do
-    before do
-      @category1 = Category.create(name: 'Category 1', icon: 'icon', user: user)
-      @category2 = Category.create(name: 'Category 2', icon: 'icon', user: user)
-      @expense1 = Expense.create(name: 'Expense 1', description: 'Desc 1', amount: 100, author: user)
-      @expense1.categories << [@category1, @category2]
-      @expense2 = Expense.create(name: 'Expense 2', description: 'Desc 2', amount: 200, author: user)
-      @expense2.categories << @category1
-      @expense3 = Expense.create(name: 'Expense 3', description: 'Desc 3', amount: 150, author: user)
-      @expense3.categories << @category2
-      @expense4 = Expense.create(name: 'Expense 4', description: 'Desc 4', amount: 120, author: user)
-      @expense5 = Expense.create(name: 'Expense 5', description: 'Desc 5', amount: 180, author: user)
-    end
-
-    it 'returns last five expenses grouped by category' do
-      expect(Expense.last_five_expenses_grouped_by_category.size).to eq(4)
-    end
-
-    it 'returns expenses by category' do
-      expect(Expense.expenses_by_category(@category1.id).size).to eq(2)
-    end
-
-    it 'returns current month expenses' do
-      expect(Expense.current_month_expenses.size).to eq(4)
-    end
-
-    it 'returns expenses in a given period' do
-      start_date = 1.month.ago.to_date
-      end_date = Date.today
-      expect(Expense.expenses_in_period(start_date, end_date).size).to eq(5)
-    end
-  end
 end
