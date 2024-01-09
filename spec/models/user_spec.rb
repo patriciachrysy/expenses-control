@@ -1,19 +1,19 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-    describe 'validations' do
-        it 'validates presence of email, password, and uniqueness of name' do
-          User.create(email: 'john@example.com', password: 'password123', name: 'John Doe')
-    
-          user = User.new(email: nil, password: nil, name: 'John Doe')
-          user.valid?
-    
-          expect(user.errors[:email]).to include("can't be blank")
-          expect(user.errors[:password]).to include("can't be blank")
-    
-          expect(user.errors[:name]).to include('has already been taken')
-        end
+  describe 'validations' do
+    it 'validates presence of email, password, and uniqueness of name' do
+      User.create(email: 'john@example.com', password: 'password123', name: 'John Doe')
+
+      user = User.new(email: nil, password: nil, name: 'John Doe')
+      user.valid?
+
+      expect(user.errors[:email]).to include("can't be blank")
+      expect(user.errors[:password]).to include("can't be blank")
+
+      expect(user.errors[:name]).to include('has already been taken')
     end
+  end
 
   describe 'associations' do
     it 'has many categories' do

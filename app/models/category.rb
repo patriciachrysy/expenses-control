@@ -1,10 +1,10 @@
 class Category < ApplicationRecord
-    belongs_to :user
-    has_many :category_expenses
-    has_many :expenses, through: :category_expenses
+  belongs_to :user
+  has_many :category_expenses
+  has_many :expenses, through: :category_expenses
 
-    validates :name, presence: true, uniqueness: true, length: { minimum: 3, maximum: 100 }
-    validates :icon, presence: true
+  validates :name, presence: true, uniqueness: true, length: { minimum: 3, maximum: 100 }
+  validates :icon, presence: true
 
-    scope :all_categories, -> { order(created_at: :desc) }
+  scope :all_categories, -> { order(created_at: :desc) }
 end

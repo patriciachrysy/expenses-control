@@ -5,7 +5,7 @@ RSpec.describe Category, type: :model do
 
   describe 'validations' do
     it 'validates presence, uniqueness, length, and icon' do
-      existing_category = Category.create(name: 'Existing Category', icon: 'icon-name', user: user)
+      existing_category = Category.create(name: 'Existing Category', icon: 'icon-name', user:)
 
       category = Category.new(name: nil, icon: nil)
       category.valid?
@@ -45,9 +45,9 @@ RSpec.describe Category, type: :model do
 
   describe 'scopes' do
     it 'orders categories by created_at in descending order' do
-      category1 = Category.create(name: 'Category 1', icon: 'icon', created_at: 3.days.ago, user: user)
-      category2 = Category.create(name: 'Category 2', icon: 'icon', created_at: 2.days.ago, user: user)
-      category3 = Category.create(name: 'Category 3', icon: 'icon', created_at: 1.day.ago, user: user)
+      category1 = Category.create(name: 'Category 1', icon: 'icon', created_at: 3.days.ago, user:)
+      category2 = Category.create(name: 'Category 2', icon: 'icon', created_at: 2.days.ago, user:)
+      category3 = Category.create(name: 'Category 3', icon: 'icon', created_at: 1.day.ago, user:)
 
       categories = Category.all_categories
 
