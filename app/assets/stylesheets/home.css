@@ -1,0 +1,30 @@
+.splashscreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 25px;
+    height: 100vh;
+}
+
+.splashscreen .logo {
+    flex-grow: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.splashscreen .logo img {
+    width: 45%;
+}
+
+.splashscreen .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.splashscreen .buttons a{
+    width: 100%;
+}
