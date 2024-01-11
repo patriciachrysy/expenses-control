@@ -53,7 +53,6 @@ a {
 
 .flash {
   padding: 10px;
-  margin-bottom: 15px;
 }
 
 .notice {
@@ -62,7 +61,7 @@ a {
 }
 
 .alert {
-  background-color: var(--secondary-color-light);
+  background-color: var(--danger-color-light);
   color: var(--danger-color);
 }
 

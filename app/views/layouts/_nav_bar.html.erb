@@ -4,5 +4,9 @@
 <div class="nav-bar">
     <%= back_button(prev_path) %>
     <span><%= title %></span>
-    <%= right_button(next_path, next_text) %>
+    <% if from_form %>
+        <%= right_submit_button(form, submit_text) %>
+    <% else %>
+        <%= right_button(next_path, next_text) %>
+    <% end %>
 </div>
