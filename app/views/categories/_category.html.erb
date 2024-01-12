@@ -1,0 +1,13 @@
+<div class="category-thumb">
+    <div class="icon-div">
+        <%= category.display_icon %>
+    </div>
+    <div class="text-div">
+        <h3><%= category.name %></h3>
+        <small><%= category.created_at.strftime("%B %d, %Y") %></small>
+    </div>
+    
+    <div class="stats-div">
+        <span>$<%= category.expenses.sum {|expense| expense.amount} %></span>
+    </div>
+</div>

@@ -7,4 +7,8 @@ class Category < ApplicationRecord
   validates :icon, presence: true
 
   scope :all_categories, -> { order(created_at: :desc) }
+
+  def display_icon
+    "<i class='las la-#{icon}'></i>".html_safe
+  end
 end

@@ -10,4 +10,8 @@ module ApplicationHelper
   def right_submit_button(form, submit_text)
     form.submit submit_text, class: 'clear-button'
   end
+
+  def line_awesome_icons
+    ['home', 'arrow-left', 'heart']
+  end
 end

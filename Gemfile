@@ -48,3 +48,6 @@ gem 'cancancan'
 gem 'sass-rails'
 
 gem 'sassc-rails'
+
+gem 'font-awesome-rails'
+

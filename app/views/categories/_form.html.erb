@@ -1,0 +1,19 @@
+<%= form_with model: category do |form| %>
+  <div>
+    <%= form.select :icon, line_awesome_icons.map { |icon| [icon, icon] }, {}, { class: 'las', prompt: 'Select an icon' } %>
+    <% category.errors.full_messages_for(:icon).each do |message| %>
+      <p class='error-messages'><%= message %></p>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.text_field :name %>
+    <% category.errors.full_messages_for(:name).each do |message| %>
+      <p class='error-messages'><%= message %></p>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit "Save", class: 'primary-button' %>
+  </div>
+<% end %>
