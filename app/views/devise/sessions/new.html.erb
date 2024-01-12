@@ -1,0 +1,20 @@
+<%= stylesheet_link_tag "application" %>
+<%= stylesheet_link_tag "auth_form" %>
+
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= render "layouts/nav_bar", {prev_path: root_path, title: 'login', from_form: true, form: f, submit_text: 'next' } %>
+  <div class="form-content">
+    <div class="field">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password" %>
+    </div>
+
+  </div>
+<% end %>
+<div class="bottom-links">
+  <%= render "devise/shared/links" %>
+</div>

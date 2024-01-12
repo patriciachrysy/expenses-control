@@ -34,14 +34,25 @@
   --secondary-color-light: #d3f5b8;
   --danger-color: #8b0000;
   --danger-color-light: #ffcccb;
+  --grey-color: #f0f2f1;
   --text-color: #434b54;
   --bold-font: 'Proxima Nova Bold', sans-serif;
   --light-font: 'Proxima Nova Light', sans-serif;
 }
 
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--grey-color);
+  font-family: var(--light-font);
+}
+
+a {
+  text-decoration: none;
+}
+
 .flash {
   padding: 10px;
-  margin-bottom: 15px;
 }
 
 .notice {
@@ -50,6 +61,28 @@
 }
 
 .alert {
-  background-color: var(--secondary-color-light);
+  background-color: var(--danger-color-light);
   color: var(--danger-color);
+}
+
+.primary-button {
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  font-family: var(--light-font);
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.clear-button {
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 5px;
+  background: none;
+  font-family: var(--light-font);
+  color: var(--text-color);
+  padding-top: 10px;
+  padding-bottom: 10px;
 }

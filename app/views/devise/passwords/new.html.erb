@@ -1,0 +1,16 @@
+<%= stylesheet_link_tag "application" %>
+<%= stylesheet_link_tag "auth_form" %>
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <%= render "layouts/nav_bar", {prev_path: root_path, title: 'reset password', from_form: true, form: f, submit_text: 'next' } %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="form-content">
+    <div class="field">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+    </div>
+  </div>
+<% end %>
+<div class="bottom-links">
+  <%= render "devise/shared/links" %>
+</div>

@@ -1,0 +1,19 @@
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  text-transform: uppercase;
+}
+
+.nav-bar span {
+  font-size: 18px;
+}
+
+.nav-bar a,
+.nav-bar input[type=submit] {
+  color: white;
+  border: none;
+}

@@ -1,0 +1,42 @@
+.form-content {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-content .field {
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid var(--text-color);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  overflow: hidden;
+}
+
+.form-content .field input {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  background-color: white;
+  color: var(--text-color);
+  font-family: var(--light-font);
+  border: none;
+}
+
+.bottom-links {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.bottom-links a {
+  color: var(--text-color);
+  font-size: 13px;
+  margin: 20px 0;
+}
+
+.bottom-links a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}

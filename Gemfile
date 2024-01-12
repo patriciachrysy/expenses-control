@@ -44,3 +44,7 @@ gem 'devise'
 gem 'carrierwave'
 
 gem 'cancancan'
+
+gem 'sass-rails'
+
+gem 'sassc-rails'
