@@ -48,4 +48,3 @@ gem 'cancancan'
 gem 'sass-rails'
 
 gem 'sassc-rails'
-
