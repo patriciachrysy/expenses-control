@@ -25,6 +25,31 @@
   border: none;
 }
 
+.form-content .photo-upload {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+  align-items: center;
+}
+
+.photo-view > img {
+  width: 85px;
+  height: 85px;
+}
+
+.form-content input[type=file] {
+  display: none;
+}
+
+.form-content .custom-file-upload {
+  text-decoration: none;
+  font-family: var(--light-font);
+  color: var(--text-color);
+  font-size: 13px;
+  width: max-content;
+}
+
 .bottom-links {
   text-align: center;
   margin-top: 25px;

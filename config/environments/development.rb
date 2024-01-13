@@ -76,12 +76,13 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = 
   config.action_mailer.smtp_settings = {
-    :user_name => '8d258605915ce0',
-    :password => '1048eb098e0d7e',
-    :address => 'sandbox.smtp.mailtrap.io',
-    :host => 'sandbox.smtp.mailtrap.io',
-    :port => '2525',
-    :authentication => :cram_md5
+    address: 'smtp-relay.brevo.com',
+    port: 587,
+    user_name: 'pmanezeu@gmail.com',
+    password: 'tK3qw8PT6kDA02vs',
+    authentication: 'login',
+    enable_starttls_auto: true
   }
 end

@@ -17,3 +17,10 @@
   color: white;
   border: none;
 }
+
+.nav-bar .menu-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+}
