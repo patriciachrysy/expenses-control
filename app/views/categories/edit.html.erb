@@ -1,7 +1,7 @@
 <%= stylesheet_link_tag "application" %>
 <%= stylesheet_link_tag "category" %>
 
-<%= render "layouts/nav_bar", {prev_path: nil, title: 'Edit category', from_form: false, next_path: categories_path, next_text: 'search' } %>
+<%= render "layouts/nav_bar", {prev_path: nil, title: 'Edit category', from_form: false, next_path: categories_path, next_text: nil } %>
 
 <div class="category-form">
     <%= render 'form', category: @category %>

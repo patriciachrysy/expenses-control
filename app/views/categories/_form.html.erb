@@ -3,6 +3,7 @@
     <%= category.display_icon if category.icon %>
   </div>
   <div class="field">
+    <%= form.label :icon %><br>
     <%= form.select :icon, line_awesome_icons, {}, { id: 'icon-select', prompt: 'Select an icon', 'data-turbo-frame': 'false' } %>
     <% category.errors.full_messages_for(:icon).each do |message| %>
       <p class='error-messages'><%= message %></p>
@@ -10,6 +11,7 @@
   </div>
 
   <div class="field">
+    <%= form.label :name %><br>
     <%= form.text_field :name, placehoder: 'category' %>
     <% category.errors.full_messages_for(:name).each do |message| %>
       <p class='error-messages'><%= message %></p>

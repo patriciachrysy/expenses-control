@@ -7,7 +7,11 @@ Rails.application.routes.draw do
     get "/logout" => "devise/sessions#destroy"
   end
 
-  resources :categories
+  resources :categories do
+    resources :expenses_manager, only: %i[new create edit update]
+  end
+
+  resources :expenses_manager, only: %i[index show destroy]
 
   root "home#index"
 
