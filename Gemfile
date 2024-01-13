@@ -25,6 +25,7 @@ gem 'bootsnap', require: false
 group :development, :test do
   gem 'capybara'
   gem 'debug', platforms: %i[mri windows]
+  gem 'rails-controller-testing'
   gem 'rspec-rails'
 end
 
@@ -50,4 +51,3 @@ gem 'sass-rails'
 gem 'sassc-rails'
 
 gem 'font-awesome-rails'
-

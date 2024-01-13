@@ -82,6 +82,17 @@ a {
   padding-bottom: 10px;
 }
 
+.secondary-button {
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+  font-family: var(--light-font);
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .clear-button {
   text-transform: uppercase;
   text-align: center;
@@ -91,4 +102,34 @@ a {
   color: var(--text-color);
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.icon-button {
+  font-size: 20px;
+}
+
+.danger-text {
+  color: var(--danger-color);
+}
+
+.secondary-text {
+  color: var(--secondary-color);
+}
+
+.primary-text {
+  color: var(--primary-color);
+}
+
+.button-round {
+  border-radius: 100%;
+}
+
+.floating-button {
+  padding: 20px;
+  font-weight: bolder;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

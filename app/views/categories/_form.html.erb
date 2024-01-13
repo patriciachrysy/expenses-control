@@ -1,19 +1,22 @@
 <%= form_with model: category do |form| %>
-  <div>
-    <%= form.select :icon, line_awesome_icons.map { |icon| [icon, icon] }, {}, { class: 'las', prompt: 'Select an icon' } %>
+  <div id="selected-icon" class="choosen-icon">
+    <%= category.display_icon if category.icon %>
+  </div>
+  <div class="field">
+    <%= form.select :icon, line_awesome_icons, {}, { id: 'icon-select', prompt: 'Select an icon', 'data-turbo-frame': 'false' } %>
     <% category.errors.full_messages_for(:icon).each do |message| %>
       <p class='error-messages'><%= message %></p>
     <% end %>
   </div>
 
-  <div>
-    <%= form.text_field :name %>
+  <div class="field">
+    <%= form.text_field :name, placehoder: 'category' %>
     <% category.errors.full_messages_for(:name).each do |message| %>
       <p class='error-messages'><%= message %></p>
     <% end %>
   </div>
 
-  <div>
+  <div class="submit-button">
     <%= form.submit "Save", class: 'primary-button' %>
   </div>
 <% end %>

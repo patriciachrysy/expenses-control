@@ -11,7 +11,11 @@ module ApplicationHelper
     form.submit submit_text, class: 'clear-button'
   end
 
+  def menu_button
+    '<button id="toggleSidebar" class="menu-button"><i class="las la-bars"></i></button>'.html_safe
+  end
+
   def line_awesome_icons
-    ['home', 'arrow-left', 'heart']
+    %w[home arrow-left heart]
   end
 end
