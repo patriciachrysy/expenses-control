@@ -8,7 +8,7 @@
     <div class="field photo-upload">
       <div class="photo-view">
         <%= image_tag resource.photo.url, id: "imagePreview" if resource.photo.present? %>
-        <%= image_tag('default-avatar.png', id: "imagePreview") unless current_user.photo.present? %>
+        <%= image_tag('default-avatar.png', id: "imagePreview") unless resource.photo.present? %>
       </div>
 
       <label class="custom-file-upload">

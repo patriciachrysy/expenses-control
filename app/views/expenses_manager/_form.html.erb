@@ -1,0 +1,48 @@
+<%= form_with model: [category, expense], url: submit_path do |form| %>
+    <div class="field photo-upload">
+      <div class="photo-view">
+        <%= image_tag expense.photo.url, id: "imagePreview" if expense.photo.present? %>
+        <%= image_tag('wallet.png', id: "imagePreview") unless expense.photo.present? %>
+      </div>
+
+      <label class="custom-file-upload">
+          <%= form.file_field :photo, id: "user_photo", accept: 'image/*', onchange: 'previewImage(event)' %>
+          upload picture
+      </label>
+    </div>
+  
+  <div class="field">
+    <% current_user.categories.where.not(id: @category.id).each do |category| %>
+      <%= check_box_tag 'categories[]', category.id, @expense.categories.include?(category) %>
+      <%= label_tag "categories_#{category.id}", category.name %><br>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %><br>
+    <%= form.text_field :name, placehoder: 'Name' %>
+    <% expense.errors.full_messages_for(:name).each do |message| %>
+      <p class='error-messages'><%= message %></p>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount %><br>
+    <%= form.number_field :amount, placehoder: 'Amount' %>
+    <% expense.errors.full_messages_for(:amount).each do |message| %>
+      <p class='error-messages'><%= message %></p>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %><br>
+    <%= form.text_area :description, placehoder: 'Description' %>
+    <% expense.errors.full_messages_for(:description).each do |message| %>
+      <p class='error-messages'><%= message %></p>
+    <% end %>
+  </div>
+
+  <div class="submit-button">
+    <%= form.submit "Save", class: 'primary-button' %>
+  </div>
+<% end %>

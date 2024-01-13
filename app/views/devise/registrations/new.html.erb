@@ -5,6 +5,17 @@
   <%= render "layouts/nav_bar", {prev_path: root_path, title: 'register', from_form: true, form: f, submit_text: 'next' } %>
   <%= render "devise/shared/error_messages", resource: resource %>
   <div class="form-content">
+    <div class="field photo-upload">
+      <div class="photo-view">
+        <%= image_tag('default-avatar.png', id: "imagePreview")%>
+      </div>
+
+      <label class="custom-file-upload">
+          <%= f.file_field :photo, id: "user_photo", accept: 'image/*', onchange: 'previewImage(event)' %>
+          upload picture
+      </label>
+    </div>
+
     <div class="field">
       <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Fullname" %>
     </div>

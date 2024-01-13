@@ -3,8 +3,8 @@ module ApplicationHelper
     link_to raw("<i class='#{icon_class}'></i>"), url, class: 'clear-button icon-button'
   end
 
-  def right_button(url, text)
-    link_to text, url, class: 'clear-button'
+  def right_button(url, icon_class = 'las la-arrow-left')
+    link_to raw("<i class='#{icon_class}'></i>"), url, class: 'clear-button icon-button'
   end
 
   def right_submit_button(form, submit_text)
@@ -16,6 +16,6 @@ module ApplicationHelper
   end
 
   def line_awesome_icons
-    %w[home arrow-left heart]
+    %w[home arrow-left heart wallet pen book building flower]
   end
 end
