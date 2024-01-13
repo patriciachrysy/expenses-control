@@ -104,7 +104,7 @@
 
 ### Deployment
 
-- Find the link to the deployed version here [Expense Controller](https://github.com/patriciachrysy)
+- Find the link to the deployed version here [Expense Controller](https://expense-controller-app.onrender.com/)
 
 ### Presentation video
 
