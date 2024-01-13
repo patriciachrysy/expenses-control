@@ -13,6 +13,7 @@
     - [Setup](#setup)
     - [Usage](#usage)
     - [Deployment](#deployment)
+    - [Presentation video](#presentation-video)
   - [👥 Author ](#-author-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -103,7 +104,11 @@
 
 ### Deployment
 
-**This project is deployed by the author, no permission for deployment by any other client.**
+- Find the link to the deployed version here [Expense Controller](https://github.com/patriciachrysy)
+
+### Presentation video
+
+- Find the link to the loom presentation video here [video](https://www.loom.com/share/317d06bee0724461b76ad07703a441f8)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
