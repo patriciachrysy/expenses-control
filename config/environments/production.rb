@@ -93,7 +93,8 @@ Rails.application.configure do
   #   /.*\.example\.com/ # Allow requests from subdomains like `www.example.com`
   # ]
   # Skip DNS rebinding protection for the default health check endpoint.
-  # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
+  config.action_mailer.default_url_options = { host: 'https://expense-controller-app.onrender.com/' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = 
   config.action_mailer.smtp_settings = {
