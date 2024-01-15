@@ -17,6 +17,7 @@ small {
 
 .expenses {
   margin-top: 20px;
+  margin-bottom: 75px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -74,7 +75,7 @@ small {
 }
 
 .expense-form {
-  margin-top: 20px;
+  margin-top: 75px;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -135,6 +136,12 @@ small {
 }
 
 .expense-header {
+  position: sticky;
+  top: 65px;
+  left: 0;
+  z-index: 99;
+  margin-bottom: 85px;
+  background-color: white;
   padding: 20px;
   display: flex;
   justify-content: space-between;

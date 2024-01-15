@@ -12,8 +12,8 @@ class Expense < ApplicationRecord
   scope :ordered_expenses, -> { order(created_at: :desc) }
 
   def self.expenses_by_category(category_id)
-    joins(:categories)
-      .where(categories: { id: category_id })
+    joins(:category_expenses)
+      .where(category_expenses: { category_id: })
       .order(created_at: :desc)
   end
 end

@@ -13,4 +13,4 @@
     <% end %>
 </div>
 
-<%= link_to raw("<i class='las la-plus'></i>"), new_category_path, class: 'primary-button floating-button button-round' if can? :create, Category %>
+<%= link_to raw("<span>Add new category</span>"), new_category_path, class: 'secondary-button floating-button' if can? :create, Category %>

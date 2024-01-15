@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Open the sidebar
         sidebar.style.width = '250px';
         content.style.marginLeft = '250px';
-        navbar.style.background = 'linear-gradient(143deg, #042b5d,#042b5d,#2d7eb9,#82abcc)';
+        navbar.style.background = 'linear-gradient(29deg, rgb(4, 43, 93), rgb(4, 43, 93), rgb(4, 43, 93), rgb(45, 126, 185), rgb(130, 171, 204))';
       }
     });
   });
