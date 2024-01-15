@@ -13,7 +13,7 @@ class Expense < ApplicationRecord
 
   def self.expenses_by_category(category_id)
     joins(:category_expenses)
-      .where(category_expenses: { category_id: category_id })
+      .where(category_expenses: { category_id: })
       .order(created_at: :desc)
   end
 end
