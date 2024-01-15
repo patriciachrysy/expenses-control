@@ -16,14 +16,13 @@ class ExpensesManagerController < ApplicationController
 
   def create
     @category = current_user.categories.find(params[:category_id])
-    @expense = current_user.expenses.new(name: params[:expense][:name], amount: params[:expense][:amount],
-                                         description: params[:expense][:description], photo: params[:expense][:photo])
+    @expense = current_user.expenses.new(expenses_params)
     authorize! :create, Expense
 
     if @expense.save
       CategoryExpense.create(category_id: @category.id, expense_id: @expense.id)
-      if params[:expense][:categories].present?
-        params[:expense][:categories].each do |category|
+      if params[:categories].present?
+        params[:categories].each do |category|
           if CategoryExpense.find_by(category_id: category, expense_id: @expense.id).nil?
             CategoryExpense.create(category_id: category, expense_id: @expense.id)
           end
@@ -50,8 +49,8 @@ class ExpensesManagerController < ApplicationController
     if @expense.update(expenses_params)
       @expense.category_expenses.destroy_all
       CategoryExpense.create(category_id: @category.id, expense_id: @expense.id)
-      if params[:expense][:categories].present?
-        params[:expense][:categories].each do |category|
+      if params[:categories].present?
+        params[:categories].each do |category|
           if CategoryExpense.find_by(category_id: category, expense_id: @expense.id).nil?
             CategoryExpense.create(category_id: category, expense_id: @expense.id)
           end
@@ -79,6 +78,6 @@ class ExpensesManagerController < ApplicationController
   private
 
   def expenses_params
-    params.require(:expense).permit(:name, :amount, :description, :photo, categories: [])
+    params.require(:expense).permit(:name, :amount, :description, :photo)
   end
 end

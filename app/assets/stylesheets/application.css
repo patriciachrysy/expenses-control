@@ -59,6 +59,12 @@ a {
 
 .flash {
   padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 300;
+  opacity: 0.9;
 }
 
 .notice {
@@ -125,11 +131,23 @@ a {
 }
 
 .floating-button {
-  padding: 20px;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  border-radius: unset;
+  padding: 20px 0;
+  height: 35px;
   font-weight: bolder;
   position: fixed;
-  bottom: 10px;
-  right: 10px;
   z-index: 100;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.floating-button span {
+  padding: 15px;
+  border: 2px solid white;
+  border-radius: 5px;
+  width: 85%;
 }

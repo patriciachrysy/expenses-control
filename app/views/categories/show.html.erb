@@ -11,7 +11,7 @@
 
 <div class="expenses">
     <% if @expenses.count > 0 %>
-        <% @category.expenses.each do |expense| %>
+        <% @expenses.each do |expense| %>
             <%= render 'expenses_manager/expense', {category: @category, expense: expense} %>
         <% end %>
     <% else %>
@@ -19,4 +19,4 @@
     <% end %>
 </div>
 
-<%= link_to raw("<i class='las la-wallet'></i>"), new_category_expenses_manager_path(@category), class: 'secondary-button floating-button button-round' if can? :create, Category %>
+<%= link_to raw("<span>Add new expense</span>"), new_category_expenses_manager_path(@category), class: 'secondary-button floating-button' if can? :create, Category %>
