@@ -108,7 +108,7 @@
 
 ### Presentation video
 
-- Find the link to the loom presentation video here [video](https://www.loom.com/share/317d06bee0724461b76ad07703a441f8)
+- Find the link to the loom presentation video here [video](https://www.loom.com/share/d7d31aaf69ae403a91dba008dc0f49f9?sid=07c3e4fe-2554-49ca-b7c7-e3664ddabc9e)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
