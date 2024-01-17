@@ -13,3 +13,141 @@
  *= require_tree .
  *= require_self
  */
+
+@font-face {
+  font-family: 'Proxima Nova Bold';
+  src: url('../fonts/Proxima-Nova-Extra-Condensed/Demo_Fonts/Fontspring-DEMO-proximanova-bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Light';
+  src: url('../fonts/Proxima-Nova-Extra-Condensed/Demo_Fonts/Fontspring-DEMO-proximanova-light.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --primary-color: #3778c2;
+  --secondary-color: #5fb523;
+  --secondary-color-light: #d3f5b8;
+  --danger-color: #8b0000;
+  --danger-color-light: #ffcccb;
+  --grey-color: #f0f2f1;
+  --text-color: #434b54;
+  --bold-font: 'Proxima Nova Bold', sans-serif;
+  --light-font: 'Proxima Nova Light', sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--grey-color);
+  font-family: var(--light-font);
+}
+
+h3 {
+  padding: 0;
+  margin: 0;
+  font-family: var(--light-font);
+}
+
+a {
+  text-decoration: none;
+}
+
+.flash {
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 300;
+  opacity: 0.9;
+}
+
+.notice {
+  background-color: var(--secondary-color-light);
+  color: var(--secondary-color);
+}
+
+.alert {
+  background-color: var(--danger-color-light);
+  color: var(--danger-color);
+}
+
+.primary-button {
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  font-family: var(--light-font);
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.secondary-button {
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+  font-family: var(--light-font);
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.clear-button {
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 5px;
+  background: none;
+  font-family: var(--light-font);
+  color: var(--text-color);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.icon-button {
+  font-size: 20px;
+}
+
+.danger-text {
+  color: var(--danger-color);
+}
+
+.secondary-text {
+  color: var(--secondary-color);
+}
+
+.primary-text {
+  color: var(--primary-color);
+}
+
+.button-round {
+  border-radius: 100%;
+}
+
+.floating-button {
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  border-radius: unset;
+  padding: 20px 0;
+  height: 35px;
+  font-weight: bolder;
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.floating-button span {
+  padding: 15px;
+  border: 2px solid white;
+  border-radius: 5px;
+  width: 85%;
+}

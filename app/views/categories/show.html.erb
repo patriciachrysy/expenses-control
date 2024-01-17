@@ -1,0 +1,22 @@
+<%= stylesheet_link_tag "application" %>
+<%= stylesheet_link_tag "category" %>
+<%= stylesheet_link_tag "expense" %>
+
+<%= render "layouts/nav_bar", {prev_path: nil, title: 'expenses', from_form: false, next_path: categories_path, next_text: 'search' } %>
+
+<div class="expense-header">
+    <span><%= @category.name %></span>
+    <span class="total">$<%= @category.expenses.sum {|expense| expense.amount} %></span>
+</div>
+
+<div class="expenses">
+    <% if @expenses.count > 0 %>
+        <% @expenses.each do |expense| %>
+            <%= render 'expenses_manager/expense', {category: @category, expense: expense} %>
+        <% end %>
+    <% else %>
+        <small> No expense added for this category, <%= link_to "click", new_category_expenses_manager_path(@category), class: 'clear-button' %> to add.</small>
+    <% end %>
+</div>
+
+<%= link_to raw("<span>Add new expense</span>"), new_category_expenses_manager_path(@category), class: 'secondary-button floating-button' if can? :create, Category %>

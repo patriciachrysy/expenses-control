@@ -1,0 +1,12 @@
+<%= stylesheet_link_tag "application" %>
+<%= stylesheet_link_tag "home" %>
+
+<div class="splashscreen">
+    <div class="logo">
+        <%= image_tag('animated-logo.gif') %>
+    </div>
+    <div class="buttons">
+        <%= link_to "log in", login_path , class: 'primary-button' %>
+        <%= link_to "sign up", register_path , class: 'clear-button' %>
+    </div>
+</div>

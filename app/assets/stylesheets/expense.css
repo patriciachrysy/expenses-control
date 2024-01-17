@@ -1,0 +1,191 @@
+h3 {
+  padding: 0;
+  margin: 0;
+  font-family: var(--light-font);
+  font-weight: lighter;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+p {
+  margin: 0;
+}
+
+small {
+  font-size: 10px;
+}
+
+.expenses {
+  margin-top: 20px;
+  margin-bottom: 75px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+}
+
+.expenses .expense-thumb {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.expenses .expense-thumb .image-div {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 5px;
+}
+
+.photo-view > img {
+  width: 85px;
+  height: 85px;
+}
+
+.expenses .expense-thumb .image-div img {
+  width: 100px;
+  height: 100px;
+}
+
+.expenses .expense-thumb .text-div {
+  width: 55%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.expenses .expense-thumb .text-div .actions {
+  align-self: end;
+}
+
+.expenses .expense-thumb .stats-div {
+  font-family: var(--bold-font);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.expense-form {
+  margin-top: 75px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.expense-form .field {
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid var(--text-color);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  overflow: hidden;
+}
+
+.expense-form .field input[type=text],
+.expense-form .field input[type=number],
+.expense-form .field textarea,
+.expense-form .field select {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  background-color: white;
+  color: var(--text-color);
+  font-family: var(--light-font);
+  border: none;
+}
+
+.expense-form .field select {
+  font-size: 15px !important;
+}
+
+.expense-form .submit-button {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.expense-form .submit-button input[type=submit] {
+  width: 80%;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.expense-form .choosen-icon {
+  margin: auto;
+  margin-bottom: 20px;
+  width: 50px;
+  height: 50px;
+  font-size: 50px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 5px;
+}
+
+.expense-header {
+  position: sticky;
+  top: 65px;
+  left: 0;
+  z-index: 99;
+  margin-bottom: 85px;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.expense-header .total {
+  font-family: var(--bold-font);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.expenses .text-div p {
+  margin: 5px 0;
+}
+
+.expenses .text-div p a {
+  font-size: 11px;
+}
+
+.expenses .text-div p .tags {
+  padding: 2px;
+  border-radius: 5px;
+  color: var(--text-color);
+  background-color: var(--grey-color);
+  border: 1px solid var(--text-color);
+}
+
+.expense-form .photo-upload {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+  align-items: center;
+}
+
+.expense-form input[type=file] {
+  display: none;
+}
+
+.expense-form .custom-file-upload {
+  text-decoration: none;
+  font-family: var(--light-font);
+  color: var(--text-color);
+  font-size: 13px;
+  width: max-content;
+}
